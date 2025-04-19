@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiitos yhteydenotostasi - Muuttopalvelu Lehto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you {
+            text-align: center;
+            padding: 5rem 0;
+            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 51, 102, 0.9)), 
+                        url('https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .thank-you-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .thank-you h1 {
+            color: #0056b3;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .thank-you p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .step {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b00;
+        }
+        .step h3 {
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>Muuttopalvelu Lehto</h1>
+                    <p>Luotettava muuttoapua pääkaupunkiseudulla</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Palvelut</a></li>
+                    <li><a href="index.html#pricing">Hinnasto</a></li>
+                    <li><a href="index.html#packing">Pakkaamisohjeet</a></li>
+                    <li><a href="index.html#contact">Ota yhteyttä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="thank-you">
+        <div class="thank-you-content">
+            <h1>Kiitos yhteydenotostasi!</h1>
+            <p>Olemme vastaanottaneet viestisi ja otamme sinuun yhteyttä mahdollisimman pian. Alla näet mitä voit odottaa seuraavaksi:</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📞</div>
+                    <h3>Vahvistuspuhelu</h3>
+                    <p>Otamme sinuun yhteyttä 24 tunnin kuluessa vahvistaaksemme muuttotiedot</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📝</div>
+                    <h3>Tarjous</h3>
+                    <p>Lähetämme sinulle yksityiskohtaisen muuttotarjouksen</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🚚</div>
+                    <h3>Muuttopäivä</h3>
+                    <p>Ammattitaitoinen tiimimme hoitaa muuttosi huolella</p>
+                </div>
+            </div>
+            
+            <p>Jos sinulla on kiireellisiä kysymyksiä, voit soittaa suoraan numeroon:</p>
+            <div class="contact-info">
+                <a href="tel:+358401234567" class="btn">+358 40 123 4567</a>
+                <p>tai</p>
+                <a href="mailto:sbcapitaloy@gmail.com" class="btn">sbcapitaloy@gmail.com</a>
+            </div>
+            
+            <p style="margin-top: 2rem;">
+                <a href="index.html" class="btn">Palaa etusivulle</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-text">
+                            <h3>Muuttopalvelu Lehto</h3>
+                            <p>Luotettava muuttoapua pääkaupunkiseudulla</p>
+                        </div>
+                    </div>
+                    <p>Tarjoamme ammattimaisia muuttopalveluja yli 10 vuoden kokemuksella. Asiakastyytyväisyys on meille tärkeintä.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Linkit</h3>
+                    <ul>
+                        <li><a href="index.html#services">Palvelut</a></li>
+                        <li><a href="index.html#pricing">Hinnasto</a></li>
+                        <li><a href="index.html#packing">Pakkaamisohjeet</a></li>
+                        <li><a href="index.html#contact">Ota yhteyttä</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Yhteystiedot</h3>
+                    <div class="contact-info">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <p>sbcapitaloy@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <p>+358 40 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-text">
+                            <p>Avoinna ma-pe 8-18</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Muuttopalvelu Lehto. Kaikki oikeudet pidätetään.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
