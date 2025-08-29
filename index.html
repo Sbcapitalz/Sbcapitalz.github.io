@@ -90,14 +90,17 @@
             padding: 0 1.5rem;
         }
         
-        /* Header */
+        /* Header - Leijuva valikko */
         header {
             background: var(--white);
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
             box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
         .header-container {
@@ -167,12 +170,13 @@
             width: 100%;
         }
         
-        /* Hero Section */
+        /* Hero Section - Muuttoaiheinen taustakuva */
         .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1620395458832-70c5c8e0b6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1700165644892-3dd6b67b25bc?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
             color: var(--white);
-            padding: 5rem 0;
+            padding: 8rem 0 5rem;
             text-align: center;
+            margin-top: 80px;
         }
         
         .hero-content {
@@ -450,11 +454,22 @@
             margin-bottom: 1rem;
         }
         
-        /* Footer */
+        /* Footer - Valkoinen fontti */
         footer {
             background: var(--dark);
-            color: var(--light-gray);
+            color: var(--white);
             padding: 3rem 0 2rem;
+        }
+        
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        footer a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
         }
         
         .footer-content {
@@ -468,6 +483,7 @@
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
         }
         
         .social-links {
@@ -573,6 +589,11 @@
                 margin: 0.5rem 0;
             }
             
+            .hero {
+                margin-top: 70px;
+                padding: 5rem 0 3rem;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -601,7 +622,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header - Leijuva valikko -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -624,7 +645,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Muuttoaiheinen taustakuva -->
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-badge">
@@ -910,7 +931,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Valkoinen fontti -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -963,6 +984,12 @@
                 e.preventDefault();
                 alert('Täytä kaikki pakolliset kentät');
             }
+        });
+
+        // Lisätään pieni väli hero-osiolle kiinteän valikon takia
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            document.querySelector('.hero').style.marginTop = headerHeight + 'px';
         });
     </script>
 </body>
