@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muutto-ohjeet | Kuinka valmistautua muuttoon - Muuttopalvelu Lehto</title>
+    <meta name="description" content="Kattavat muutto-ohjeet ja muistilista muuttoon valmistautumiseen. Opas pakkaamiseen, suojaukseen ja muuton suunnitteluun.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Tiedosto -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data for HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Kuinka valmistautua muuttoon",
+      "description": "Kattava opas muuttoon valmistautumiseen, pakkaamiseen ja suojaukseen",
+      "totalTime": "PT168H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "50-200"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Pakkauslaatikot"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Kuplakalvo"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Pakkausnauha"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Leimuri"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Sakset"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Suunnittelu",
+          "text": "Aloita muuton suunnittelu 4-6 viikkoa etukäteen. Tee lista kaikista tehtävistä ja aikatauluta ne."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Purkaminen",
+          "text": "Pura turhat tavarat 3-4 viikkoa ennen muuttoa. Myy, lahjoita tai kierrätä tarpeettomat esineet."
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header - Leijuva valikko -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-truck-moving"></i>
+                </div>
+                <div class="logo-text">Muuttopalvelu Lehto</div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="ohjeet.html" class="active">Muutto-ohjeet</a></li>
+                    <li><a href="index.html#services">Palvelut</a></li>
+                    <li><a href="index.html#pricing">Hinnasto</a></li>
+                    <li><a href="index.html#about">Tietoa meistä</a></li>
+                    <li><a href="index.html#contact">Ota yhteyttä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Etusivu</a></li>
+                <li>Muutto-ohjeet</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Muutto-ohjeet ja vinkit</h1>
+            <p>Kattava opas muuttoon valmistautumiseen, pakkaamiseen ja suojaukseen. Lue ammattilaisten vinkit helpottamaan muuttoasi.</p>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="container">
+        <div class="quick-nav">
+            <h2 class="text-center mb-3">Pikaohjeet</h2>
+            <div class="grid grid-4">
+                <a href="#suunnittelu" class="card text-center quick-nav-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Suunnittelu</h4>
+                </a>
+                <a href="#pakkaaminen" class="card text-center quick-nav-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4>Pakkaaminen</h4>
+                </a>
+                <a href="#suojaus" class="card text-center quick-nav-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Suojaus</h4>
+                </a>
+                <a href="#muistilista" class="card text-center quick-nav-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h4>Muistilista</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section id="suunnittelu" class="container">
+        <h2 class="section-title">Muuton suunnittelu</h2>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3><i class="fas fa-clock text-primary"></i> 4-6 viikkoa ennen muuttoa</h3>
+                <ul class="checklist">
+                    <li>Tee lista kaikista muuton vaiheista</li>
+                    <li>Varaa muuttopalvelu etukäteen</li>
+                    <li>Aloita turhien tavaroiden purkaminen</li>
+                    <li>Tilaa tarvittavat pakkausmateriaalit</li>
+                    <li>Ilmoita muutostasi vuokranantajalle</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-clock text-primary"></i> 2-3 viikkoa ennen muuttoa</h3>
+                <ul class="checklist">
+                    <li>Aloita pakkaaminen harvemmin käytetyistä huoneista</li>
+                    <li>Varmista uuden asunnon avaimien saanti</li>
+                    <li>Ilmoita muutostasi sähkö-, vesi- ja lämmitysyhtiöille</li>
+                    <li>Tee varasuunnitelma sään muuttuessa</li>
+                    <li>Varmista hissin varaus muuttopäivälle</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="highlight">
+            <h3>Muuttoajan valinta</h3>
+            <p>Valitse muuttopäivä viikon keskeltä (ma-to), sillä viikonloppuisin ja kuun alussa/kessä muuttopalvelut ovat ruuhkaisimpia. Varattu aika varmistaa, että saat halutun palvelun ja edullisemman hinnan.</p>
+        </div>
+    </section>
+
+    <!-- Packing Section -->
+    <section id="pakkaaminen" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Pakkaaminen ammattimaisesti</h2>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3><i class="fas fa-boxes text-primary"></i> Pakkausmateriaalit</h3>
+                    <ul>
+                        <li>Vahvat pakkauslaatikot eri kokoisina</li>
+                        <li>Kuplakalvo herkillä esineillä</li>
+                        <li>Pakkausnauha ja leimuri</li>
+                        <li>Pahvit ja kulmasuojat huonekaluille</li>
+                        <li>Muovikalvo pehmeille tavaroille</li>
+                        <li>Tarrat ja tussit merkitsemiseen</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-tools text-primary"></i> Pakkausvinkit</h3>
+                    <ul>
+                        <li>Pakkaa huone kerrallaan</li>
+                        <li>Merkitse laatikot selkeästi (huone + sisältö)</li>
+                        <li>Käytä kevyitä esineitä täytteenä</li>
+                        <li>Älä tee laatikoista liian raskaita</li>
+                        <li>Pidä tärkeät tavarat erillään</li>
+                        <li>Pakkaa viimeisenä tarvikkeet ensimmäisenä käyttöön</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-exclamation-triangle text-accent"></i> Erikoistavaroiden pakkaus</h3>
+                    <ul>
+                        <li><strong>Lasi- ja posliinitavarat:</strong> Käytä kuplakalvoa ja täytettä</li>
+                        <li><strong>Taulut ja peilit:</strong> Kulmasuojat ja erilliset pakkaukset</li>
+                        <li><strong>Sähkölaitteet:</strong> Alkuperäiset pakkaukset parhaita</li>
+                        <li><strong>Vaatekaapit:</strong> Siirrä vaatteet roikkumassa vaatekuljetuslaatikossa</li>
+                        <li><strong>Kasvit:</strong> Siirrä autossa turvallisesti erikseen</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="note">
+                <h4>Pakkausjärjestys</h4>
+                <p>Aloita pakkaaminen harvemmin käytetyistä tiloista kuten kellarista, vintiltä tai kaapeista. Jätä arkipäivän tarpeet kuten vaatteet, hygieniatuotteet ja keittiötarvikkeet viimeiseksi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protection Section -->
+    <section id="suojaus" class="container">
+        <h2 class="section-title">Tavaroiden suojaus</h2>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3><i class="fas fa-couch text-primary"></i> Huonekalujen suojaus</h3>
+                <p>Huonekalut kärsivät useimmiten muuton aikana. Suojaa ne näillä tavoilla:</p>
+                <ul>
+                    <li>Pura irrotettavat osat (jalat, hyllyt) ja pakkaa ne erikseen</li>
+                    <li>Käytä kulmasuojia kaikissa terävissä kulmissa</li>
+                    <li>Peitä pinnat muovikalvolla tai pehmeillä peitteillä</li>
+                    <li>Kierrä sohvat ja tuolit pehmeisiin suojakääreisiin</li>
+                    <li>Merkitse lasipinnat selkeästi "VARO LASIA" -tarroilla</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-tv text-primary"></i> Elektroniikan suojaus</h3>
+                <p>Sähkölaitteet vaativat erityistä huomiota:</p>
+                <ul>
+                    <li>Pakkaa alkuperäisissä pakkauksissa mikäli mahdollista</li>
+                    <li>Käytä kuplakalvoa ja vahvoja laatikoita</li>
+                    <li>Irrota kaapelot ja merkitse ne</li>
+                    <li>Ota kuvat kytkennöistä ennen irrottamista</li>
+                    <li>Pidä tärkeät laitteet (tietokoneet) mukana matkassa</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3><i class="fas fa-home text-primary"></i> Asunnon suojaus muuton aikana</h3>
+            <p>Suojaa sekä vanha että uusi asunto muuton aikana:</p>
+            <div class="grid grid-2">
+                <div>
+                    <h4>Lattiat</h4>
+                    <ul>
+                        <li>Käytä lattiasuojakalvoja käytävillä</li>
+                        <li>Peitä arvokkaat lattiapinnat vahvalla muovilla</li>
+                        <li>Pidä ovet auki estääksesi vahingot</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Seinät ja ovet</h4>
+                    <ul>
+                        <li>Aseta ovensuojat kaikkiin oviin</li>
+                        <li>Käytä kulmasuojia käytävien kulmissa</li>
+                        <li>Irrota ovet tarpeen vaatiessa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section id="muistilista" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Muistilista muuttajalle</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3><i class="fas fa-clipboard-check text-primary"></i> Viikko ennen muuttoa</h3>
+                    <div class="checklist-container">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Vahvista muuttopäivä ja -aika muuttoyhtiön kanssa
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Ilmoita muutosta postille, pankille ja vakuutusyhtiölle
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Varmista avainten luovutus ja vastaanotto
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Tyhjennä jääkaappi ja pakastin
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Laita tärkeät asiakirjat ja arvotavarat turvalliseen paikkaan
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-clipboard-check text-primary"></i> Muuttopäivän aamuna</h3>
+                    <div class="checklist-container">
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Nouse aikaisin ja syö hyvä aamiainen
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Laita matkalla tarvittavat tavarat erilleen
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Valmista välipala ja juoma muuttomiehille
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Tarkista, että kaikki huoneet on tyhjennetty
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Ota yhteys uuteen osoitteeseen saapuessasi
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-truck-loading text-primary"></i> Muuton jälkeinen lista</h3>
+                <div class="grid grid-3">
+                    <div>
+                        <h4>Ensimmäinen päivä</h4>
+                        <ul>
+                            <li>Asenna sängyt ja petivaatteet</li>
+                            <li>Kytke välttämättömät sähkölaitteet</li>
+                            <li>Tarkista veden ja lämmityksen toimivuus</li>
+                            <li>Avaa välttämättömät pakkaukset</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Ensimmäinen viikko</h4>
+                        <ul>
+                            <li>Aseta huonekalut paikoilleen</li>
+                            <li>Pura kaikki pakkaukset</li>
+                            <li>Tutustu uuteen ympäristöösi</li>
+                            <li>Ilmoita muutosta naapureille</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Ensimmäinen kuukausi</h4>
+                        <ul>
+                            <li>Säädä kalustus tarpeidesi mukaan</li>
+                            <li>Kierrätä pakkausmateriaalit</li>
+                            <li>Tee tarkistus kävelyllä uudessa osoitteessa</li>
+                            <li>Päivitä osoite kaikille tärkeille palveluille</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="container">
+        <h2 class="section-title">Hätätilanteet ja ongelmatilanteet</h2>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3><i class="fas fa-phone-alt text-accent"></i> Tärkeät yhteystiedot</h3>
+                <ul class="contact-list">
+                    <li>
+                        <strong>Muuttoyhtiö:</strong>
+                        <div>Muuttopalvelu Lehto</div>
+                        <div>044 950 1929</div>
+                    </li>
+                    <li>
+                        <strong>Hätänumero:</strong>
+                        <div>112</div>
+                    </li>
+                    <li>
+                        <strong>Sähköyhtiö:</strong>
+                        <div>Helsingin Energia: 09 6171</div>
+                    </li>
+                    <li>
+                        <strong>Vesiyhtiö:</strong>
+                        <div>Helen Vesi: 09 6171</div>
+                    </li>
+                    <li>
+                        <strong>Vuokranantaja/Isännöitsijä:</strong>
+                        <div>Tallenna etukäteen</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-first-aid text-accent"></i> Ensiapuvinkit</h3>
+                <ul>
+                    <li>Pidä ensiapulaukku helposti saatavilla</li>
+                    <li>Tiedä lähin terveysasema</li>
+                    <li>Varmista, että lääkkeet ovat matkalla mukana</li>
+                    <li>Kannata vettä ja pientä välipalaa</li>
+                    <li>Pidä puhelin ladattuna ja laturi saatavilla</li>
+                </ul>
+                
+                <h4 class="mt-3">Yleisimmät vammat muuton aikana:</h4>
+                <ul>
+                    <li><strong>Selkäsärky:</strong> Nosta aina polvista, älä selästä</li>
+                    <li><strong>Lastut ja haavat:</strong> Pidä hanskat kädessä ja ensiapulaukku saatavilla</li>
+                    <li><strong>Lihasvenähdykset:</strong> Lämpimät venytykset ennen työn aloittamista</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Valmis muuttoon?</h2>
+            <p class="mb-3">Ota yhteyttä ja saat ammattitaitoista apua muuttoosi</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-primary btn-large"><i class="fas fa-phone"></i> Pyydä tarjous</a>
+                <a href="tel:+358449501929" class="btn btn-secondary btn-large"><i class="fas fa-phone-alt"></i> Soita nyt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Muuttopalvelu Lehto</h3>
+                    <p>Asiantunteva muutto- ja kuljetuspalvelu PK-seudulla ja koko Etelä-Suomessa.</p>
+                </div>
+                <div>
+                    <h3>Yhteystiedot</h3>
+                    <p>Puhelin: <a href="tel:+358449501929">044 950 1929</a></p>
+                    <p>Sähköposti: <a href="mailto:sbcapitaloy@gmail.com">sbcapitaloy@gmail.com</a></p>
+                </div>
+                <div>
+                    <h3>Linkit</h3>
+                    <ul>
+                        <li><a href="index.html">Etusivu</a></li>
+                        <li><a href="ohjeet.html">Muutto-ohjeet</a></li>
+                        <li><a href="index.html#services">Palvelut</a></li>
+                        <li><a href="index.html#pricing">Hinnasto</a></li>
+                        <li><a href="index.html#contact">Ota yhteyttä</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SB Capital Oy | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
