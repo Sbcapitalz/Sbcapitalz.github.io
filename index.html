@@ -86,10 +86,7 @@
                 </div>
                 <div class="logo-text">Muuttopalvelu Lehto</div>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="main-nav">
+            <nav>
                 <ul>
                     <li><a href="index.html">Etusivu</a></li>
                     <li><a href="ohjeet.html">Muutto-ohjeet</a></li>
@@ -318,12 +315,12 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="current-floor">Kerros *</label>
-                            <input type="number" id="current-floor" name="current-floor" required>
+                            <input type="number" id="current-floor" name="current-floor" min="0" max="50" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="current-size">Neliöt *</label>
-                            <input type="number" id="current-size" name="current-size" required>
+                            <input type="number" id="current-size" name="current-size" min="10" max="500" required>
                         </div>
                     </div>
                     
@@ -371,12 +368,12 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="new-floor">Kerros *</label>
-                            <input type="number" id="new-floor" name="new-floor" required>
+                            <input type="number" id="new-floor" name="new-floor" min="0" max="50" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="new-size">Neliöt *</label>
-                            <input type="number" id="new-size" name="new-size" required>
+                            <input type="number" id="new-size" name="new-size" min="10" max="500" required>
                         </div>
                     </div>
                     
@@ -391,7 +388,7 @@
                     
                     <div class="form-group">
                         <label for="message">Lisätietoja (esim. erikoistavarat, pakkaustarpeet)</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Kuvaile tässä mahdollisia erikoistavaroita kuten piano, isot kalusteet, pakkauspalvelun tarve jne."></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Lähetä tarjouspyyntö</button>
@@ -414,9 +411,9 @@
                         <span>Suoritamme muuttoja: ma-su 7.00-22.00</span>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
@@ -460,81 +457,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 SB Capital Oy | Kaikki oikeudet pidätetään</p>
+                <p>© <span id="current-year">2025</span> SB Capital Oy | Kaikki oikeudet pidätetään</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Korjattu mobiilivalikko
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            // Valikon toggle-toiminto
-            navToggle.addEventListener('click', function() {
-                nav.classList.toggle('show');
-                this.setAttribute('aria-expanded', nav.classList.contains('show'));
-            });
-            
-            // Sulje valikko linkin klikkauksen jälkeen
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('show');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                });
-            });
-            
-            // Sulje valikko kun klikataan valikon ulkopuolelle
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = nav.contains(event.target);
-                const isClickOnToggle = navToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('show')) {
-                    nav.classList.remove('show');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-            
-            // Lisätään pieni väli hero-osiolle kiinteän valikon takia
-            const headerHeight = document.querySelector('header').offsetHeight;
-            document.querySelector('.hero').style.marginTop = headerHeight + 'px';
-            
-            // Sivutuslinkkien sileä scrollaus
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Form validation
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                let valid = true;
-                const requiredFields = this.querySelectorAll('[required]');
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        valid = false;
-                        field.style.borderColor = 'red';
-                    } else {
-                        field.style.borderColor = '';
-                    }
-                });
-                
-                if (!valid) {
-                    e.preventDefault();
-                    alert('Täytä kaikki pakolliset kentät');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
