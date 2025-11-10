@@ -27,6 +27,8 @@ body {
     color: var(--dark);
     background-color: var(--light);
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -117,6 +119,7 @@ header {
     font-size: 1.5rem;
     color: var(--dark);
     cursor: pointer;
+    z-index: 1001;
 }
 
 nav ul {
@@ -214,6 +217,8 @@ nav ul li a:hover:after {
     transition: var(--transition);
     height: 100%;
     border: 1px solid var(--light-gray);
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover {
@@ -273,6 +278,8 @@ nav ul li a:hover:after {
 /* Sections */
 section {
     padding: 5rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -424,6 +431,8 @@ section {
     text-align: center;
     margin: 3rem 0;
     box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
 }
 
 .contact-info a {
@@ -450,6 +459,9 @@ footer {
     background: var(--dark);
     color: var(--white);
     padding: 3rem 0 2rem;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
 }
 
 footer a {
@@ -544,6 +556,8 @@ footer a:hover {
     border-radius: var(--radius);
     margin: 2rem 0;
     border-left: 4px solid var(--primary);
+    position: relative;
+    z-index: 1;
 }
 
 .note {
@@ -552,6 +566,8 @@ footer a:hover {
     border-radius: var(--radius);
     margin: 2rem 0;
     border-left: 4px solid var(--secondary);
+    position: relative;
+    z-index: 1;
 }
 
 /* Breadcrumb */
@@ -560,6 +576,8 @@ footer a:hover {
     background-color: var(--light);
     border-bottom: 1px solid var(--light-gray);
     margin-top: 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .breadcrumb ol {
@@ -607,6 +625,8 @@ footer a:hover {
 .info-item {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--light-gray);
+    position: relative;
+    z-index: 1;
 }
 
 .info-item:last-child {
@@ -635,6 +655,8 @@ footer a:hover {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: var(--white);
     padding: 4rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-section h2 {
@@ -649,38 +671,83 @@ footer a:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive */
+/* KORJAUKSET MOBIILIVALIKKOON JA FOOTER-ONGELMIIN */
+
+/* Mobiilivalikon korjaukset */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 2rem 1rem;
+        box-shadow: var(--shadow-lg);
+        z-index: 999;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        border-top: 1px solid var(--light-gray);
+    }
+    
+    nav.show {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 1rem 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    nav ul li a:after {
+        display: none;
+    }
+    
+    /* Estetään scrollausta kun valikko on auki */
+    body.nav-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     h1 {
         font-size: 2.25rem;
     }
     
     h2 {
         font-size: 1.75rem;
-    }
-    
-    .nav-toggle {
-        display: block;
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        padding: 1rem;
-        box-shadow: var(--shadow);
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    nav ul li {
-        margin: 0.5rem 0;
     }
     
     .hero {
@@ -744,8 +811,13 @@ footer a:hover {
     .feature {
         padding: 1.5rem 1rem;
     }
+    
+    section {
+        padding: 3rem 0;
+    }
 }
 
+/* Pienemmät näytöt */
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;
@@ -767,10 +839,6 @@ footer a:hover {
         font-size: 1rem;
     }
     
-    section {
-        padding: 3rem 0;
-    }
-    
     .container {
         padding: 0 1rem;
     }
@@ -783,6 +851,14 @@ footer a:hover {
     .btn-large {
         padding: 0.875rem 1.75rem;
         font-size: 1rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
     }
 }
 
@@ -896,4 +972,27 @@ textarea:focus {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+/* Varmistetaan että kaikki osiot eivät mene footerin yli */
+main {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 400px); /* Varmistaa että footer pysyy alhaalla */
+}
+
+/* Lisätään selkeä erotus osioiden väliin */
+section:not(:last-child) {
+    border-bottom: none;
+}
+
+/* Varmistetaan että kontaktiosio näkyy kokonaan */
+#contact {
+    padding-bottom: 3rem;
+}
+
+/* Parannetaan footerin näkyvyyttä */
+footer {
+    clear: both;
+    position: relative;
 }
