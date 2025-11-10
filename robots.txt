@@ -1,0 +1,38 @@
+# Robots.txt tiedosto - Muuttopalvelu Lehto
+# Generated: 2025-01-11
+
+User-agent: *
+Allow: /
+
+# Estä käyttäjätunnistetietojen käsittely
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+
+# Estä hakukoneita indeksoimasta lomakkeita
+Disallow: /search/
+Disallow: /query/
+
+# Estä teknisiä tiedostoja
+Disallow: /includes/
+Disallow: /config/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /cache/
+
+# Sallitaan staattiset resurssit
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# Sitemap-osoite
+Sitemap: https://muuttopalvelulehto.fi/sitemap.xml
+
+# Yritystunnisteet (valinnainen)
+# User-agent: Googlebot
+# User-agent: Bingbot
+# User-agent: Slurp
+# User-agent: DuckDuckBot
